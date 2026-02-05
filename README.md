@@ -61,8 +61,8 @@ Run:
 python -m streamlit run app.py
 
 ---
-
-##Assumptions
+```
+## Assumptions
 
 The CSV has headers and at least some structured columns.
 If the file looks like sales data, the app tries to normalize it into date, amount, region, and product.
@@ -70,7 +70,7 @@ If it does not look like sales data, the app switches to a generic mode and stil
 The LLM is not trusted for calculations. All numbers come from pandas.
 
 ---
-##Limitations
+## Limitations
 
 This is not a production-grade system.
 The intent routing is keyword-based and not learned.
@@ -78,7 +78,7 @@ Large CSVs will work, but the UI can feel slow since everything runs locally.
 No persistent storage or indexing is used yet. Everything is in memory.
 
 ---
-###Possible improvements
+## Possible improvements
 
 Add embeddings and a vector index for document-level search.
 Add caching for repeated queries.
